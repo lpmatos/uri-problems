@@ -1,3 +1,3 @@
 # URI
 
-Just a reposiroty to URL problems
+Just a reposiroty to URL problems.
