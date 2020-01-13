@@ -2,5 +2,12 @@
 
 include Math
 
-puts PI.class
-puts PI
+def area(raio)
+    if raio.kind_of? Float
+        return PI * (raio ** 2)
+    end
+end
+
+raio = ((gets.strip).to_f).round(2)
+
+puts "A=#{area(raio)}"
