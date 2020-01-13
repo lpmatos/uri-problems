@@ -2,6 +2,8 @@
 
 include Math
 
+PI = 3.14159
+
 def area(raio)
     if raio.kind_of? Float
         return PI * (raio ** 2)
