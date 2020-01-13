@@ -3,3 +3,4 @@
 include Math
 
 puts PI.class
+puts PI
