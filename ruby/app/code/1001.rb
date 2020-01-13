@@ -1,9 +1,7 @@
 #!/usr/bin/ruby
 
 def soma(first, last)
-    if first.kind_of? Integer and last.kind_of? Integer
-        return first + last
-    end
+    return if first.kind_of? Integer and last.kind_of? Integer then first + last else "" end
 end
 
 if __FILE__ == $0
