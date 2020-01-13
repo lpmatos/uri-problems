@@ -10,4 +10,4 @@ end
 
 raio = ((gets.strip).to_f).round(2)
 
-puts "A=#{area(raio)}"
+puts sprintf "A=%.4f" % (area(raio))
