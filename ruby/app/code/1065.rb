@@ -6,7 +6,7 @@
 
 def filter(array)
     puts "#{array}"
-    return array.map{ |valor| valor if valor % 2 == 0 }
+    return (array.map{ |valor| valor if valor % 2 == 0 }).compact
 end
 
 # =============================================================================
