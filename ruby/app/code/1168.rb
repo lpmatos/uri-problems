@@ -17,7 +17,7 @@ end
 # =============================================================================
 
 def compact(array)
-    return if array.count(nil) > 0 then array.compact else array end
+    return array.count(nil) > 0 ? array.compact : array
 end
 
 # =============================================================================
