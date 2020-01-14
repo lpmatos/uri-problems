@@ -5,6 +5,7 @@
 # =============================================================================
 
 if __FILE__ == $0
-    valores = Array.new(5).map(&:(gets))
+    valores = ->(tamanho) { Array.new(tamanho) }
+    lista = valores.call(5)
     puts "#{valores}"
 end
