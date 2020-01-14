@@ -1,11 +1,22 @@
 #!/usr/bin/ruby
 
 # =============================================================================
+# FUNCTIONS
+# =============================================================================
+
+def filter(array)
+    return (array.map{ |valor| valor % 2 == 0 }).size
+end
+
+# =============================================================================
 # MAIN
 # =============================================================================
 
 if __FILE__ == $0
-    valores = ->(tamanho) { Array.new(tamanho) }
-    lista = (valores.call(5)).to_a
-    puts "#{valores}"
+    values = Array.new(5)
+    values.each do |value|
+        value = (gets.strip).to_i
+        values.push(value)
+    end
+    puts "#{values}"
 end
