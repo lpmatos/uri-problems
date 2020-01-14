@@ -11,7 +11,13 @@ $LEDS = (%w(2 5 5 4 5 6 3 7 6 6)).map{ |value| value.to_i }
 # =============================================================================
 
 def sum(array)
-    return array.inject(0){ |sum, value| sum + value }
+    return array.inject(0){ |sum, value| sum + value } # inject (value_initial) { |result_memo, object| block }
+end
+
+# =============================================================================
+
+def compact(array)
+    return if array.count(nil) > 0 then array.compact else array end
 end
 
 # =============================================================================
@@ -26,6 +32,6 @@ if __FILE__ == $0
         number.each_with_index do |value, index|
             $VALUES[index] = $LEDS[value - 1]
         end
-        puts "#{sum($VALUES.compact)} leds"
+        puts "#{sum(compact($VALUES))} leds"
     end
 end
