@@ -28,8 +28,6 @@ if __FILE__ == $0
     if valores.size == 2
         first = (($table[((valores[0]).to_i) - 1]).last()).to_f
         count = (valores[1]).to_i
-        puts "#{$prices}"
-        puts "#{first}"
         puts sprintf "Total: R$ %.2f\n" % (prod(first, count))
     end
 end
