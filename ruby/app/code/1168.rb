@@ -16,7 +16,7 @@ if __FILE__ == $0
     for elemento in 0..quantidade
         number = ((gets.strip).split("")).map(&:to_i)
         number.each_with_index do |value, index|
-            $VALUES[index] = $LEDS[value]
+            $VALUES[index] = $LEDS[value - 1]
         end
         puts "#{$VALUES}"
     end
