@@ -9,14 +9,24 @@ $prices = (%w(4 4.50 5 2 1.5)).map(&:to_f) # Usando map para converter todo arra
 $table = $codes.zip($prices)
 
 # =============================================================================
+# FUNCTIONS
+# =============================================================================
+
+def soma(first, last)
+    if first.kind_of? Integer and last.kind_of? Integer
+        return first + last
+    end
+end
+
+# =============================================================================
 # MAIN
 # =============================================================================
 
 if __FILE__ == $0
     valores = ((STDIN.gets).strip).split(" ")
-    puts "#{valores.class}"
-    puts "#{valores}"
-    puts "#{$codes}"
-    puts "#{$prices}"
-    puts "#{$table}"
+    if valores.size == 2
+        first = (valores[0]).to_i
+        last = (valores[1]).to_i
+        puts sprintf "Total: R$ %.2f\n" % (soma(first[1], last[1]))
+    end
 end
