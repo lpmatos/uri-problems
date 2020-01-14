@@ -17,5 +17,5 @@ end
 if __FILE__ == $0
     first = ((gets.strip).to_f).round(1)
     last = ((gets.strip).to_f).round(1)
-    puts sprintf "MEDIA = %.4f\n" % (media(first, last))
+    puts sprintf "MEDIA = %.5f\n" % (media(first, last))
 end
