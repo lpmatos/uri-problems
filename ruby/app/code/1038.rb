@@ -28,7 +28,6 @@ if __FILE__ == $0
     if valores.size == 2
         first = ((valores[0]).to_i) - 1
         count = (valores[1]).to_i
-        puts "#{$table[first]}"
-        puts "#{count}"
+        puts sprintf "Total: R$ %.2f\n" % (prod($table[first][1], count))
     end
 end
