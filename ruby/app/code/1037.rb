@@ -14,13 +14,13 @@ end
 
 def intervalo(value)
     case value
-    when value.between?(0, 25)  
+    when value >= 0 and value <= 25 
         puts "Intervalo [0,25]"
-    when value.between?(26, 50)  
+    when value > 25 and value <= 50 
         puts "Intervalo (25,50]"
-    when value.between?(51, 75)  
+    when value > 50 and value <= 75
         puts "Intervalo (50,75]"
-    when value.between?(76, 100) 
+    when value > 75 and value <= 100
         puts "Intervalo (75,100]"
     else
         puts "Fora de intervalo"
