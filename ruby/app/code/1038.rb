@@ -4,8 +4,8 @@
 # GLOBAL VARIABLE
 # =============================================================================
 
-$codes = (%w(1 2 3 4 5)).map(&:to_i)
-$prices = (%w(4 4.50 5 2 1.5)).map(&:to_f)
+$codes = (%w(1 2 3 4 5)).map{ |value| value.to_i } # Usando map para converter todo array para inteiro
+$prices = (%w(4 4.50 5 2 1.5)).map(&:to_f) # Usando map para converter todo array para float
 
 # =============================================================================
 # MAIN
