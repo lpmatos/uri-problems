@@ -14,9 +14,8 @@ end
 
 if __FILE__ == $0
     values = Array.new(5)
-    for elemento in 0..5
-        value = (gets.strip).to_i
-        values.push(value)
+    for elemento in 0..4
+        values[elemento] = (gets.strip).to_i
     end
     puts "#{values}"
 end
