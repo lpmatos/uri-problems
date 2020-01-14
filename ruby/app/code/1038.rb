@@ -12,9 +12,9 @@ $table = $codes.zip($prices)
 # FUNCTIONS
 # =============================================================================
 
-def soma(first, last)
+def prod(first, last)
     if first.kind_of? Integer and last.kind_of? Integer
-        return first + last
+        return first * last
     end
 end
 
@@ -27,6 +27,6 @@ if __FILE__ == $0
     if valores.size == 2
         first = (valores[0]).to_i
         last = (valores[1]).to_i
-        puts sprintf "Total: R$ %.2f\n" % (soma(first[1], last[1]))
+        puts sprintf "Total: R$ %.2f\n" % (prod(first[1], last[1]))
     end
 end
