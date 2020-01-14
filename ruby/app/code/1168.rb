@@ -30,6 +30,6 @@ if __FILE__ == $0
         # TIRA NULOS
         values = values.compact
         # SHOW
-        puts "#{values}"
+        puts "#{values.inject(0){|sum, value| sum + value }} leds"
     end
 end
