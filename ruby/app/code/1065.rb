@@ -4,7 +4,7 @@
 # MAIN
 # =============================================================================
 
-if __FILE__ == $0
-    valores = Array.new(5).map(&:gets.strip)
+if __FILE__ == $
+    valores = Array.new(5).map(&:(gets.strip))
     puts "#{valores}"
 end
