@@ -14,7 +14,7 @@ $table = $codes.zip($prices)
 
 def prod(first, count)
     if first.kind_of? Integer and count.kind_of? Integer
-        return first * count
+        return (first * count).to_f
     end
 end
 
@@ -31,5 +31,6 @@ if __FILE__ == $0
         puts "#{first}"
         puts "#{count}"
         puts "#{first * count}"
+        puts sprintf "Total: R$ %.2f\n" % (prod(first, count))
     end
 end
