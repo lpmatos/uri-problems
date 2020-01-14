@@ -5,6 +5,6 @@
 # =============================================================================
 
 if __FILE__ == $0
-    valores = Array.new(5).map(&:(gets.strip).to_i)
+    valores = Array.new(5).map(&:gets.strip)
     puts "#{valores}"
 end
