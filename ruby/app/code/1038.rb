@@ -16,6 +16,6 @@ if __FILE__ == $0
     valores = ((STDIN.gets).strip).split(" ")
     puts "#{valores.class}"
     puts "#{valores}"
-    puts $codes
-    puts $prices
+    puts "#{$codes}"
+    puts "#{$prices}"
 end
