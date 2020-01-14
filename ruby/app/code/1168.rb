@@ -21,11 +21,15 @@ if __FILE__ == $0
     for elemento in 0..quantidade
         # GETTING NUMBER
         number = (gets.strip).split("")
+        # INICIALIZA ARRAY
+        values = Array.new(number.size)
         # LOOP
         number.each do |value|
-            number[value.to_i] = $LEDS[value.to_i]
+            values.push($LEDS[value.to_i])
         end
+        # TIRA NULOS
+        values = values.compact
         # SHOW
-        puts "#{number}"
+        puts "#{values}"
     end
 end
