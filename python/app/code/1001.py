@@ -19,5 +19,5 @@ if __name__ == "__main__":
     first = int(input())
     last = int(input())
 
-    print(f"X = {soma(first, last)}")
+    print("X = {0}".format(soma(first, last)))
     
