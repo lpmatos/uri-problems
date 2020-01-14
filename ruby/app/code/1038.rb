@@ -27,6 +27,6 @@ if __FILE__ == $0
     if valores.size == 2
         first = (valores[0]).to_i
         count = (valores[1]).to_i
-        puts $table[first] * count
+        puts "#{$table[first] * count}"
     end
 end
