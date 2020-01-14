@@ -17,8 +17,7 @@ $LEDS = (%w(2 5 5 4 5 6 3 7 6 6)).map{ |value| value.to_i }
 if __FILE__ == $0
     quantidade = (gets.strip).to_i - 1
     for elemento in 0..quantidade
-        for value in gets.strip
-            puts "#{value}"
-        end
+        number = (gets.strip).split("")
+        puts "#{number}"
     end
 end
