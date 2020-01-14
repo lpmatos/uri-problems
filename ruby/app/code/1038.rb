@@ -12,9 +12,9 @@ $table = $codes.zip($prices)
 # FUNCTIONS
 # =============================================================================
 
-def prod(first, last)
-    if first.kind_of? Integer and last.kind_of? Integer
-        return first * last
+def prod(first, count)
+    if first.kind_of? Integer and count.kind_of? Integer
+        return first * count
     end
 end
 
@@ -26,8 +26,7 @@ if __FILE__ == $0
     valores = ((STDIN.gets).strip).split(" ")
     if valores.size == 2
         first = (valores[0]).to_i
-        last = (valores[1]).to_i
-        puts $table[first]
-        puts $table[last]
+        count = (valores[1]).to_i
+        puts $table[first] * count
     end
 end
