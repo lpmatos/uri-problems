@@ -5,7 +5,7 @@
 # =============================================================================
 
 $codes = (%w(1 2 3 4 5)).map{ |value| value.to_i } # Usando map para converter todo array para inteiro
-$prices = (%w(4 4.50 5 2 1.5)).map(&:to_f) # Usando map para converter todo array para float
+$prices = [4, 4.5, 5, 2, 1.5].map(&:to_f) # Usando map para converter todo array para float
 $table = $codes.zip($prices)
 
 # =============================================================================
@@ -28,9 +28,6 @@ if __FILE__ == $0
     if valores.size == 2
         first = (($table[(((valores[0]).to_i) - 1)]).last()).to_i
         count = (valores[1]).to_i
-        puts "#{first}"
-        puts "#{count}"
-        puts "#{first * count}"
         puts sprintf "Total: R$ %.2f\n" % (prod(first, count))
     end
 end
