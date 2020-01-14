@@ -26,9 +26,9 @@ if __FILE__ == $0
     valores = ((STDIN.gets).strip).split(" ")
     array = $table
     if valores.size == 2
-        first = ((valores[0]).to_i) - 1
+        first = $table[(((valores[0]).to_i) - 1)]
         count = (valores[1]).to_i
-        puts "#{$table[first]}"
+        puts "#{first}"
         puts "#{count}"
     end
 end
