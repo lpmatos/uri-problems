@@ -19,7 +19,7 @@ if __FILE__ == $0
     for elemento in 0..quantidade
         number = (gets.strip).split("")
         values = Array.new(number.size)
-        puts "#{number}"
-        puts "#{values}"
+        final = $LEDS.zip(number, values)
+        puts "#{final}"
     end
 end
