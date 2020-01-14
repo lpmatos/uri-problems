@@ -14,7 +14,7 @@ end
 
 if __FILE__ == $0
     values = Array.new(5)
-    values.each do |value|
+    for elemento in 0..5
         value = (gets.strip).to_i
         values.push(value)
     end
