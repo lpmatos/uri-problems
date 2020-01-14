@@ -13,7 +13,7 @@ $table = $codes.zip($prices)
 # =============================================================================
 
 def prod(first, count)
-    if first.kind_of? Integer and count.kind_of? Integer
+    if first.kind_of? Float and count.kind_of? Integer
         return (first * count).to_f
     end
 end
