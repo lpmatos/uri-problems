@@ -23,7 +23,7 @@ if __FILE__ == $0
         number = (gets.strip).split("")
         # LOOP
         number.each do |value|
-            number[value.to_i] = LEDS[value.to_i]
+            number[value.to_i] = $LEDS[value.to_i]
         end
         # SHOW
         puts "#{number}"
