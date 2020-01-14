@@ -18,7 +18,7 @@ if __FILE__ == $0
     quantidade = (gets.strip).to_i - 1
     for elemento in 0..quantidade
         number = (gets.strip).split("")
-        final = $LEDS.zip(number)
+        final = number.zip($LEDS)
         puts "#{final}"
     end
 end
