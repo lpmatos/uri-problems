@@ -28,8 +28,8 @@ if __FILE__ == $0
     if valores.size == 2
         first = ((valores[0]).to_i) - 1
         count = (valores[1]).to_i
-        first = $table[first]
-        first = first[1]
-        puts sprintf "Total: R$ %.2f\n" % (first, count))
+        other = $table[first]
+        final = other[1]
+        puts sprintf "Total: R$ %.2f\n" % (final, count))
     end
 end
