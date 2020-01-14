@@ -15,8 +15,8 @@ if __FILE__ == $0
     quantidade = (gets.strip).to_i - 1
     for elemento in 0..quantidade
         number = ((gets.strip).split("")).map(&:to_i)
-        number.each do |value|
-            $VALUES[value] = $LEDS[value]
+        number.each_with_index do |value, index|
+            $VALUES[index] = $LEDS[value]
         end
         puts "#{$VALUES}"
     end
