@@ -13,7 +13,7 @@ b = 7.5
 
 def media(first, last)
     if first.kind_of? Float and last.kind_of? Float
-        return (first * A) + (last * B)/ A + B
+        return (((first * A) + (last * B))/(A + B))
     end
 end
 
