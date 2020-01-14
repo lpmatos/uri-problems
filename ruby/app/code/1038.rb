@@ -27,6 +27,6 @@ if __FILE__ == $0
     if valores.size == 2
         first = (valores[0]).to_i
         last = (valores[1]).to_i
-        puts sprintf "Total: R$ %.2f\n" % (prod(first[1], last[1]))
+        puts sprintf "Total: R$ %.2f\n" % (prod($table[first][1], $table[last][1]))
     end
 end
