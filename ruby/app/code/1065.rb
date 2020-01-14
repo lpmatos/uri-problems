@@ -6,6 +6,6 @@
 
 if __FILE__ == $0
     valores = ->(tamanho) { Array.new(tamanho) }
-    lista = valores.call(5)
+    lista = (valores.call(5))to_a
     puts "#{valores}"
 end
