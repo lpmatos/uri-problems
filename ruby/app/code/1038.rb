@@ -6,6 +6,6 @@
 
 if __FILE__ == $0
     valores = ((STDIN.gets).strip).split(" ")
-    
-    puts valores
+    puts "#{valores.class}"
+    puts "#{valores}"
 end
