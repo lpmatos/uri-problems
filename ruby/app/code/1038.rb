@@ -27,8 +27,8 @@ if __FILE__ == $0
     array = $table
     if valores.size == 2
         first = (valores[0]).to_i
-        count = (valores[1]).to_i
-        puts "#{array[3]}"
+        count = ((valores[1]).to_i) - 1
+        puts "#{$table[count]}"
         puts "#{count}"
     end
 end
