@@ -26,8 +26,9 @@ if __FILE__ == $0
     valores = ((STDIN.gets).strip).split(" ")
     array = $table
     if valores.size == 2
-        first = (($table[(((valores[0]).to_i) - 1)]).last()).to_f
+        first = $table[(((valores[0]).to_i) - 1)]
         count = (valores[1]).to_i
-        puts sprintf "Total: R$ %.2f\n" % (prod(first, count))
+        puts "#{first}"
+        #puts sprintf "Total: R$ %.2f\n" % (prod(first, count))
     end
 end
