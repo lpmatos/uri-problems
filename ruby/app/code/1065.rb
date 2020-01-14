@@ -14,8 +14,9 @@ end
 
 if __FILE__ == $0
     values = Array.new(5)
-    for elemento in 0..4
+    for elemento in values
         values[elemento] = (gets.strip).to_i
     end
     puts "#{values}"
+    puts "#{filter(values)}"
 end
