@@ -4,13 +4,21 @@
 # CONSTANTS
 # =============================================================================
 
-$alfabeto = (%w(a b c d e f g h i j k l m n o p q r s t u v x z)).map{ |value| value.to_s }
+$ALFABETO = 26
 
 # =============================================================================
+# FUNCTIONS
+# =============================================================================
 
-def exit(value)
-    if value.length < 3 and value.length > 1000
-        exit
+def core(value)
+    if value.kind_of? Integer
+        if value == $ALFABETO
+            puts "frase completa"
+        elsif value >= $ALFABETO/2 and value < $ALFABETO
+            puts "frase quase completa"
+        else
+            puts "frase mal elaborada"
+        end
     end
 end
 
@@ -21,14 +29,11 @@ end
 if __FILE__ == $0
     quantidade = (gets.strip).to_i - 1
     for elemento in 0..quantidade
-        frase = ((gets.chop).to_s).gsub(",", "") # O método gsub executa o replace em todas as instâncias, o que é diferente do método sub que executa apenas na primeira ocorrência
-        exit(frase)
-        frase = frase.gsub(" ", "")
-        words = frase.split("")
-        unique = words.uniq
-        puts "#{$alfabeto}\n"
-        puts "#{frase}\n"
-        puts "#{words}\n"
-        puts "#{unique}\n"
+        frase = ((gets.chop).to_s).gsub(",", "")
+        if frase.length < 3 and frase.length > 1000
+            exit
+        end
+        words = ((frase.gsub(" ", "")).split("").uniq).size
+        core(words)
     end
 end
