@@ -57,7 +57,7 @@ def core(array)
             impar.push(valor)
         end
     end
-    return compact(par.concat(impar))
+    return compact(par.concat(impar.reverse))
 end
 
 # =============================================================================
