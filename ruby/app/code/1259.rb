@@ -40,6 +40,12 @@ end
 
 # =============================================================================
 
+def compact(array)
+    return array.count(nil) > 0 ? array.compact : array
+end
+
+# =============================================================================
+
 def core(array)
     array = sort(array)
     par = Array.new(count_par(array))
@@ -51,7 +57,7 @@ def core(array)
             impar.push(valor)
         end
     end
-    return par.concat(impar)
+    return compact(par.concat(impar))
 end
 
 # =============================================================================
@@ -67,10 +73,8 @@ if __FILE__ == $0
     array.each_with_index do |content, index|
         array[index] = (gets.strip).to_i
     end
+    # CHAMANDO FUNÇÃO CORE
+    array = core(array)
     # EXIBINDO
-    puts "#{array}"
-    # CHAMANDO FUNCTION
-    novo = core(array)
-    # EXIBINDO
-    puts "#{novo}"
+    core(array).each { |value| puts value }
 end
