@@ -21,12 +21,14 @@ end
 if __FILE__ == $0
     quantidade = (gets.strip).to_i - 1
     for elemento in 0..quantidade
-        frase = (gets.to_s).gsub(",", "") # O método gsub executa o replace em todas as instâncias, o que é diferente do método sub que executa apenas na primeira ocorrência
+        frase = ((gets.chop).to_s).gsub(",", "") # O método gsub executa o replace em todas as instâncias, o que é diferente do método sub que executa apenas na primeira ocorrência
         exit(frase)
         frase = frase.gsub(" ", "")
         words = frase.split("")
+        unique = words.uniq
         puts "#{$alfabeto}\n"
         puts "#{frase}\n"
         puts "#{words}\n"
+        puts "#{unique}\n"
     end
 end
