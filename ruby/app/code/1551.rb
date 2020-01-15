@@ -16,6 +16,6 @@ if __FILE__ == $0
         frase = (gets.to_s).gsub(" ", "")
         frase = frase.gsub(",", "")
         puts "#{$alfabeto}"
-        puts "#{$frase}"
+        puts "#{frase}"
     end
 end
