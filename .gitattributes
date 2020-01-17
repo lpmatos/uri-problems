@@ -1,4 +1,0 @@
-#
-# Exclude files from exporting
-
-.gitattributes  export-ignore
