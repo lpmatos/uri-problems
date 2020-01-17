@@ -105,17 +105,3 @@ docker ps
 ```
 docker exec -it <CONTAINER_ID> <COMMAND>
 ```
-
-### Run with docker-compose
-
-Run the command below at the root of the directory where the **docker-compose.yml** file is located.
-
-```
-docker-compose up
-```
-
-or
-
-```
-docker-compose up -d --build
-```
