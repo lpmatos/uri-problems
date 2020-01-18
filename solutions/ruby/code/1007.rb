@@ -5,7 +5,9 @@
 # =============================================================================
 
 def calculo(*args)
-    puts "#{args}"
+    if args.size == 4
+        puts "DIFERENCA = #{(args[0] * args[1]) - (args[2] * args[3])}\n"
+    end
 end
 
 # =============================================================================
@@ -13,5 +15,6 @@ end
 # =============================================================================
 
 if __FILE__ == $0
-    calculo(5, 6, 7, 8)
+    A, B, C, D = gets.strip.to_i, gets.strip.to_i, gets.strip.to_i, gets.strip.to_i
+    calculo(A, B, C, D)
 end
