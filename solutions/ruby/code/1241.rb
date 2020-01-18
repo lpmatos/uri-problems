@@ -14,7 +14,7 @@ if __FILE__ == $0
                 tamanho = last.length
                 diferenca = (first.length - tamanho).abs
                 atual = first[diferenca..(first.length - 1)]
-                unless atual == last
+                if atual == last
                     puts "encaixa"
                 else
                     puts "nao encaixa"
