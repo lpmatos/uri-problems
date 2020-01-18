@@ -13,6 +13,6 @@ end
 # =============================================================================
 
 if __FILE__ == $0
-    A, B, C = gets.strip.to_f
+    A, B, C = gets.strip.to_f, gets.strip.to_f, gets.strip.to_f
     puts sprintf "MEDIA = %.1f\n" % (media(A, B, C))
 end
