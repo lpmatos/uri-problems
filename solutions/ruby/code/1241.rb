@@ -9,7 +9,7 @@ if __FILE__ == $0
     for elemento in 0..quantidade
         valores = ((STDIN.gets).strip).split(" ")
         if valores.size == 2
-            first, last = valores[0].to_i), valores[1].to_i
+            first, last = valores[0].to_i, valores[1].to_i
             if (first.length > 0 and last.length > 0) and (first.length <= 1000 and last.length <= 1000)
                 tamanho = last.length
                 diferenca = (first.length - tamanho).abs
