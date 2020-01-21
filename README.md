@@ -37,7 +37,7 @@ This repository brings together solutions for the **URI** Online Judge exercises
 
 2. Name the file with the question ID.
 
-3. Add the file to the appropriate level folder - If the folder does not exist, create according to the standard
+3. Add the file to the appropriate level folder - If the folder does not exist, create according to the standard.
 
 4. Make the **Commit**.
 
