@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Documentation file 1004.py."""
+"""Documentation file 1005.py."""
 
 # =============================================================================
 # FUNCTIONS
@@ -8,20 +8,17 @@
 
 def read():
     try:
-        return int(input())
-    except Exception as error:
+        return float(input())
+    except Exception:
         return None
 
-# =============================================================================
-
-def prod(first, last):
-    return first * last if isinstance(first, int) and isinstance(last, int) else None
+def calculo(*args):
+    return ((args[0] * 3.5) + (args[1] * 7.5))/11 if all(isinstance(elemento, float) for elemento in args) else None
 
 # =============================================================================
-# MAIN
+# FUNCTIONS
 # =============================================================================
 
 if __name__ == "__main__":
-    lista = [read() for elemento in range(2)]
-    PROD = prod(lista[0], lista[1])
-    print("PROD = {0}".format(PROD))
+    first, last = read(), read()
+    print("MEDIA = %0.5f" % (calculo(first, last)))

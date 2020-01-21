@@ -25,7 +25,27 @@ This will give access on your **local machine** to this project.
 
 ## Description
 
-Just a **Repository** to resolve **URI** problems.
+This repository brings together solutions for the **URI** Online Judge exercises done in several languages, such as:
+
+* **Python**.
+* **Ruby**.
+* **Go**.
+
+## How to contribute
+
+1. Make a **Fork**.
+
+2. Name the file with the question ID.
+
+3. Add the file to the appropriate level folder - If the folder does not exist, create according to the standard
+
+4. Make the **Commit**.
+
+5. Open a **Pull Request**.
+
+6. Wait for your pull request to be accepted.. 🚀
+
+Remember: There is no bad code, there are different views/versions of solving the same problem. 😊
 
 ## Docker
 
