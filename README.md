@@ -3,11 +3,7 @@ URI Solution
 
 Just a **Repository** to resolve **URI** problems.
 
-## Copyright (c)
-
-Lucca Pessoa da Silva Matos (c) 2019
-
-## Getting Started
+### Getting Started
 
 To use this repository you need to make a **git clone**:
 
@@ -17,13 +13,13 @@ git clone --depth 1 https://github.com/lpmatos/uri-problems.git -b master
 
 This will give access on your **local machine** to this project.
 
-## Organization
+### Organization
 
 * **/solutions** is the directory where the **solutions** by language are located.
 * **README.md** is an optional file. A human-readable **README** file.
 * The files found in the project root are support files to **CI/CD** process and others contexts.
 
-## Description
+### Description
 
 This repository brings together solutions for the **URI** Online Judge exercises done in several languages, such as:
 
@@ -31,97 +27,101 @@ This repository brings together solutions for the **URI** Online Judge exercises
 * **Ruby**.
 * **Go**.
 
-## How to contribute
+### 🐋 Development with Docker
 
-1. Make a **Fork**.
+Steps to build the Docker Image.
 
-2. Name the file with the question ID.
+#### Build
 
-3. Add the file to the appropriate level folder - If the folder does not exist, create according to the standard.
-
-4. Make the **Commit**.
-
-5. Open a **Pull Request**.
-
-6. Wait for your pull request to be accepted.. 🚀
-
-Remember: There is no bad code, there are different views/versions of solving the same problem. 😊
-
-## Docker
-
-### Build
-
-To **Build** the image:
-
-```
+```bash
 docker image build -t <IMAGE_NAME> -f <PATH_DOCKERFILE> <PATH_CONTEXT_DOCKERFILE>
-```
-
-or
-
-```
 docker image build -t <IMAGE_NAME> . (This context)
 ```
 
-Explain:
+#### Run
 
-* **IMAGE_NAME**:
-    * Image **Name/Tag**.
-* **PATH_DOCKERFILE**:
-    * **Dockerfile** location.
-    * Where is the full path to **Dockerfile** located?
-* **PATH_CONTEXT_DOCKERFILE**:
-    * **Dockerfile** context.
-    * Where is the **Dockerfile**?
+Steps to run the Docker Container.
 
-#### Run the Container with the image
+* **Linux** running:
 
-* Running the **Container** in **Detached mode**/**Background**:
-
-```
-docker container run -d -p <LOCAL_PORT:CONTAINER_PORT> <IMAGE_NAME>
+```bash
+docker container run -d -p <LOCAL_PORT:CONTAINER_PORT> <IMAGE_NAME> <COMMAND>
+docker container run -it --rm --name <CONTAINER_NAME> -p <LOCAL_PORT:CONTAINER_PORT> <IMAGE_NAME> <COMMAND>
 ```
 
-* Running the **Container** in **Interactive mode**:
+* **Windows** running:
 
 ```
-docker container run -it --rm --name <CONTAINER_NAME> -p <LOCAL_PORT:CONTAINER_PORT> <IMAGE_NAME>
+winpty docker.exe container run -it --rm <IMAGE_NAME> <COMMAND>
 ```
 
-### Basic Commands
+For more information, access the [Docker](https://docs.docker.com/) documentation or [this](docs/docker.md).
 
-* Windows
+### 🐋 Development with Docker Compose
 
-```
-winpty docker.exe run -it --rm <IMAGE_NAME> <COMMAND>
-```
+Build and run a docker-compose.
 
-* Showing all local images:
-
-```
-docker images
+```bash
+docker-compose up --build
 ```
 
-or
+Down all services deployed by docker-compose.
 
-```
-docker image ls
-```
-
-* Showing all Active or Inactive **Containers**:
-
-```
-docker ps -a
+```bash
+docker-compose down
 ```
 
-* Showing all Active **Containers**:
+Down all services and delete all images.
 
-```
-docker ps
+```bash
+docker-compose down --rmi all
 ```
 
-* Entering an Active **Container**:
+### How to contribute
 
+>
+> 1. Make a **Fork**.
+> 2. Follow the project organization.
+> 3. Add the file to the appropriate level folder - If the folder does not exist, create according to the standard.
+> 4. Make the **Commit**.
+> 5. Open a **Pull Request**.
+> 6. Wait for your pull request to be accepted.. 🚀
+>
+Remember: There is no bad code, there are different views/versions of solving the same problem. 😊
+
+### Add to git and push
+
+You must send the project to your GitHub after the modifications
+
+```bash
+git add -f .
+git commit -m "Added - Fixing somethings"
+git push origin master
 ```
-docker exec -it <CONTAINER_ID> <COMMAND>
-```
+
+### Versioning
+
+- [CHANGELOG](CHANGELOG.md)
+
+### License
+
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
+
+### Author
+
+👤 **Lucca Pessoa**
+
+Hey!! If you like this project or if you find some bugs feel free to contact me in my channels:
+
+> * Email: luccapsm@gmail.com
+> * Website: https://github.com/lpmatos
+> * Github: [@lpmatos](https://github.com/lpmatos)
+> * LinkedIn: [@luccapessoa](https://www.linkedin.com/in/lucca-pessoa-4abb71138/)
+
+### Show your support
+
+Give a ⭐️ if this project helped you!
+
+---
+
+<p align="center">Feito com ❤️ by <strong>Lucca Pessoa :wave:</p>
